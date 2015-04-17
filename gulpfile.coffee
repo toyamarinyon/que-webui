@@ -38,6 +38,11 @@ gulp.task 'build:css', ->
       ]
     .pipe gulp.dest('public/assets/styles')
 
+gulp.task 'copy:assets', ->
+  gulp
+    .src 'src/assets/fonts/**/**.ttf'
+    .pipe gulp.dest 'public/assets/fonts'
+
 gulp.task 'watch', ['build'], ->
   gulp.watch 'src/assets/scripts/**/*.coffee', ['build:coffee']
   gulp.watch 'src/**/*.jade', ['build:jade']
@@ -48,3 +53,4 @@ gulp.task 'webserver', ->
     .pipe webserver
       livereload: true
       host: '0.0.0.0'
+      directoryListening: true
