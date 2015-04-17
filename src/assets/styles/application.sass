@@ -1,14 +1,21 @@
 $font-family-sans-serif:  Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-size-base: 20px
 $navbar-margin-bottom: 0px
+$navbar-height: 70px
+$table-cell-padding: 20px
 @import bootstrap
 @import que/variables
-@import que/navs
 @import que/fonts
+@import que/labels
+@import que/navs
+@import que/navbar
+@import que/tables
 
 body
   letter-spacing: 0.1em
+  -webkit-font-smoothing: subpixel-antialiased;
 .que-page-header
   position: relative
   background-color: #eff6f6
   padding-top: 60px
+.que-contents
+  padding-top: 40px

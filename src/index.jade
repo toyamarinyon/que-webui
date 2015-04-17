@@ -19,4 +19,23 @@ html(lang="en")
             a(href="#") Saved Queries
           li
             a(href="#") Draft Queries
+    .container.que-contents
+      table.table.que-table
+        thead
+          tr
+            td Query
+            td Status
+            td Started
+            td Duration
+            td Output
+        tbody
+          - for (var i = 0; i < 10; i++)
+            tr
+              td SELECT * FROM UserData WHERE RegistDateTime >= "2015-01-01 00:00:00"
+              td
+                span.label.label-que-default COMPLETE
+              td 2015/04/17 18:33:27
+              td 280.27ms
+              td
+                a.btn.btn-default.btn-xs Download CSV
     script(src="./assets/scripts/application.js")
