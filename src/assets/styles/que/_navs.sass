@@ -1,0 +1,26 @@
+// Pills
+// -------------------------
+.nav-minimal
+  > li
+    float: left
+
+    // Links rendered as pills
+    > a
+      color: #c6c6c6
+      padding-left: 0px
+      padding-right: 0px
+      &,
+      &:hover,
+      &:focus
+        background-color: transparent
+
+    + li
+      margin-left: 50px
+
+    // Active state
+    &.active > a
+      &,
+      &:hover,
+      &:focus
+        color: $nav-bar-active-link-hover-color
+        border-bottom: solid 1px $nav-bar-active-link-hover-color
