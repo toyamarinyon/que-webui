@@ -5,8 +5,5 @@ lib
 src/types
 .idea
 typings
-public/kobito.*
-public/*.css
-public/js/*.js
-public/env/*.js
+public/
 test/e2e/screenshots/*.png
