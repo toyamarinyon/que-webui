@@ -42,6 +42,9 @@ gulp.task 'copy:assets', ->
   gulp
     .src 'src/assets/fonts/**/**.ttf'
     .pipe gulp.dest 'public/assets/fonts'
+  gulp
+    .src 'vendor/ace-builds/src-min/**/**.js'
+    .pipe gulp.dest 'public/assets/scripts/ace-builds'
 
 gulp.task 'watch', ['build'], ->
   gulp.watch 'src/assets/scripts/**/*.coffee', ['build:coffee']

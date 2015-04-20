@@ -18,6 +18,12 @@ html(lang="en")
           .col-md-6.text-right.que-page-header-actions
             a.btn.btn-default(href="./write.html") Save query
             a.btn.btn-primary(href="./write.html") Run query
-    .container.que-contents.que-contents-non-padding
-      textarea.que-query-editor(autofocus="true",placeholder="SELECT sex, COUNT(*), AVG(age), (MAX(age) - MIN(age))")
+    .container.que-contents.que-contents-editor
+      #editor
     script(src="./assets/scripts/application.js")
+    script(src="./assets/scripts/ace-builds/ace.js")
+    script(src="./assets/scripts/ace-builds/mode-sql.js")
+    script.
+      var editor = ace.edit("editor")
+      var SqlMode = ace.require("ace/mode/sql").Mode;
+      editor.getSession().setMode(new SqlMode());
