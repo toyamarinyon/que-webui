@@ -5,7 +5,7 @@ html(lang="en")
     link(rel="stylesheet",type="text/css",href="./assets/styles/application.css")
     link(href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,100,400",rel="stylesheet",type="text/css")
   body
-    nav.navbar.navbar-default
+    nav.navbar
       .container
         .navbar-header
           a.navbar-brand(href="#")
@@ -19,6 +19,9 @@ html(lang="en")
             a(href="#") Saved Queries
           li
             a(href="#") Draft Queries
+          li.pull-right
+            .que-page-header-right
+              a.btn.btn-primary(href="#") Write Query
     .container.que-contents
       table.table.que-table
         thead
