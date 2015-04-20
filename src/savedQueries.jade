@@ -26,15 +26,15 @@ html(lang="en")
       table.table.que-table
         thead
           tr
-            td Name
+            td(style="width:15%;") Name
             td Description
             td Query
             td Saved
         tbody
-          - for (var i = 0; i < 10; i++)
+          - for (var i = 0; i < 2; i++)
             tr
               td
-                | user3/5~
+                | user after 3/5
               td
                 | Users who have membership registration in May or later
               td SELECT * FROM UserData WHERE RegistDateTime >= "2015-01-01 00:00:00"
