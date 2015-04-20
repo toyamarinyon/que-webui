@@ -1,12 +1,13 @@
 // Pills
 // -------------------------
 .nav-minimal
+  letter-spacing: 0.15em
   > li
     float: left
 
     // Links rendered as pills
     > a
-      color: #c6c6c6
+      color: $que-gray-light
       padding-left: 6px
       padding-right: 6px
       &,
@@ -15,7 +16,7 @@
         background-color: transparent
 
     + li
-      margin-left: 3.0em
+      margin-left: 2.0em
 
     // Active state
     &.active > a

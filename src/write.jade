@@ -8,7 +8,7 @@ html(lang="en")
     nav.navbar
       .container
         .navbar-header
-          a.navbar-brand(href="#")
+          a.navbar-brand(href="./index.html")
             | Que
     header.que-page-header
       .container
@@ -20,6 +20,38 @@ html(lang="en")
             a.btn.btn-primary(href="./write.html") Run query
     .container.que-contents.que-contents-editor
       #editor
+    header.que-page-header.que-page-header-non-padding-bottom
+      .container
+        ul.nav.nav-minimal
+          li.active
+            a(href="#") Recent queries
+          li
+            a(href="#") Saved queries
+          li
+            a(href="#") Draft queries
+          li.pull-right
+            a(href="#") Table finder
+          li.pull-right
+            a(href="#") Messages
+    .container.que-contents.que-contents-non-padding
+      table.table.que-table
+        thead
+          tr
+            td Query
+            td Status
+            td Started
+            td Duration
+            td Output
+        tbody
+          - for (var i = 0; i < 10; i++)
+            tr
+              td SELECT * FROM UserData WHERE RegistDateTime >= "2015-01-01 00:00:00"
+              td
+                span.label.label-que-default COMPLETE
+              td 2015/04/17 18:33:27
+              td 280.27ms
+              td
+                a.btn.btn-default.btn-xs Download CSV
     script(src="./assets/scripts/application.js")
     script(src="./assets/scripts/ace-builds/ace.js")
     script(src="./assets/scripts/ace-builds/mode-sql.js")
