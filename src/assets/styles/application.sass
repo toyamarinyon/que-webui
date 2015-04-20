@@ -8,6 +8,7 @@ $table-cell-padding: 20px
 @import que/navs
 @import que/navbar
 @import que/tables
+@import que/type
 
 body
   letter-spacing: 0.30em
@@ -15,7 +16,30 @@ body
 .que-page-header
   position: relative
   background-color: #eff6f6
-  padding-top: 60px
+  padding-top: 10px
+  padding-bottom: 10px
+  &.que-page-header-higher
+    padding-top: 60px
+    padding-bottom: 0px
 .que-page-header-right
+.que-page-header-actions
+  a + a
+    margin-left: 1.0em
+
 .que-contents
   padding-top: 40px
+  &.que-contents-non-padding
+    padding-top: 0px
+
+textarea.que-query-editor
+  font-size: 18px
+  font-family: $font-family-monospace
+  border: none
+  width: 100%
+  padding: 30px
+  color: #222
+  line-height: 1.5
+  &:focus
+    outline: 0
+
+

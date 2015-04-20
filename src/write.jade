@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    title
+    link(rel="stylesheet",type="text/css",href="./assets/styles/application.css")
+    link(href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,100,400",rel="stylesheet",type="text/css")
+  body
+    nav.navbar
+      .container
+        .navbar-header
+          a.navbar-brand(href="#")
+            | Que
+    header.que-page-header
+      .container
+        .row.que-row
+          .col-md-6
+            h1 Write a query
+          .col-md-6.text-right.que-page-header-actions
+            a.btn.btn-default(href="./write.html") Save query
+            a.btn.btn-primary(href="./write.html") Run query
+    .container.que-contents.que-contents-non-padding
+      textarea.que-query-editor(autofocus="true",placeholder="SELECT sex, COUNT(*), AVG(age), (MAX(age) - MIN(age))")
+    script(src="./assets/scripts/application.js")
