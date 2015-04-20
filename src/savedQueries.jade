@@ -13,9 +13,9 @@ html(lang="en")
     header.que-page-header.que-page-header-higher
       .container
         ul.nav.nav-minimal
-          li.active
-            a(href="./index.html") Recent queries
           li
+            a(href="./index.html") Recent queries
+          li.active
             a(href="./savedQueries.html") Saved queries
           li
             a(href="#") Draft queries
@@ -26,19 +26,17 @@ html(lang="en")
       table.table.que-table
         thead
           tr
+            td Name
+            td Description
             td Query
-            td Status
-            td Started
-            td Duration
-            td Output
+            td Saved
         tbody
           - for (var i = 0; i < 10; i++)
             tr
+              td
+                | user3/5~
+              td
+                | Users who have membership registration in May or later
               td SELECT * FROM UserData WHERE RegistDateTime >= "2015-01-01 00:00:00"
-              td
-                span.label.label-que-default COMPLETE
-              td 2015/04/17 18:33:27
-              td 280.27ms
-              td
-                a.btn.btn-default.btn-xs Download CSV
+              td 2015/04/20 01:50:30
     script(src="./assets/scripts/application.js")
