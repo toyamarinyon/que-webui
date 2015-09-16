@@ -3,7 +3,9 @@ $navbar-height: 70px
 $table-cell-padding: 20px
 @import bootstrap
 @import que/variables
+@import que/mixins/_buttons
 @import que/fonts
+@import que/buttons
 @import que/labels
 @import que/navs
 @import que/navbar
@@ -15,9 +17,10 @@ body
   -webkit-font-smoothing: subpixel-antialiased;
 .que-page-header
   position: relative
-  background-color: #eff6f6
+  background-color: #fafafa
   padding-top: 10px
   padding-bottom: 10px
+  border-bottom: solid 1px #eaeaea
   &.que-page-header-higher
     padding-top: 60px
     padding-bottom: 0px
