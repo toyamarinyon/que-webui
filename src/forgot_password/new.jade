@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    title
+    link(rel="stylesheet",type="text/css",href="../assets/styles/application.css")
+    link(href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,100,400",rel="stylesheet",type="text/css")
+  body
+    nav.navbar
+      .container
+        .navbar-header
+          a.navbar-brand(href="./index.html")
+            | Que
+    .container.que-contents.que-contents-login.text-center
+      .row
+        .col-md-4.col-md-offset-4
+          form
+            h2.que-form-title Reset Password
+            .form-group
+              input(type="email",class="form-control input-lg",id="MailAddress",placeholder="Mail Address")
+            .form-group
+              a.btn-que.btn-que-primary.btn-que-lg.btn-que-block(href="index.html") Reset my password
+    script(src="../assets/scripts/application.js")
+

@@ -23,23 +23,17 @@ html(lang="en")
             .que-page-header-right
               a.btn.btn-que-primary(href="./write.html") Write a query
     .container.que-contents
-      table.table.que-table
-        thead
-          tr
-            td Query
-            td Status
-            td Started
-            td Duration
-            td Output
-        tbody
-          - for (var i = 0; i < 10; i++)
-            tr
-              td
-                span.query SELECT * FROM UserData WHERE RegistDateTime >= "2015-01-01 00:00:00"
-              td
-                span.label.label-que-default COMPLETE
-              td 2015/04/17 18:33:27
-              td 280.27ms
-              td
-                a.btn.btn-default.btn-xs Download CSV
+      .row
+        .col-md-8.col-md-offset-2
+          h2 Looks like there area no database connections here.
+          p You can create a database connection.
+          form
+            .form-group
+              input(type="text",class="form-control input-lg",id="Host",placeholder="Host")
+            .form-group
+              input(type="text",class="form-control input-lg",id="User",placeholder="User")
+            .form-group
+              input(type="password",class="form-control input-lg",id="Password",placeholder="Password")
+            .form-group
+              a.btn-que.btn-que-primary.btn-que-lg.btn-que-block(href="index.html") Log In
     script(src="./assets/scripts/application.js")

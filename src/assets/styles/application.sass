@@ -1,8 +1,5 @@
-$navbar-margin-bottom: 0px
-$navbar-height: 70px
-$table-cell-padding: 20px
-@import bootstrap
 @import que/variables
+@import bootstrap
 @import que/mixins/_buttons
 @import que/fonts
 @import que/buttons
@@ -11,11 +8,12 @@ $table-cell-padding: 20px
 @import que/navbar
 @import que/tables
 @import que/type
+@import que/scaffolding
 
 body
-  letter-spacing: 0.30em
   -webkit-font-smoothing: subpixel-antialiased;
 .que-page-header
+  letter-spacing: 0.30em
   position: relative
   background-color: #fafafa
   padding-top: 10px
@@ -47,3 +45,10 @@ body
   letter-spacing: 0.0em
   font-size: 18px
 
+.que-contents-login
+  .sub-lead
+    color: $que-gray-light
+    border-color: $que-gray-light
+
+.que-form-title
+  margin-bottom: 24px

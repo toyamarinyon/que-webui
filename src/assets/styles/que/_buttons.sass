@@ -1,4 +1,54 @@
+.btn-que
+  display: inline-block
+  margin-bottom: 0
+  font-weight: $btn-font-weight
+  text-align: center
+  vertical-align: middle
+  touch-action: manipulation
+  cursor: pointer
+  background-image: none
+  white-space: nowrap
+  +button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base)
+  +user-select(none)
+
+  &,
+  &:active,
+  &.active
+    &:focus,
+    &.focus
+      +tab-focus
+
+  &:hover,
+  &:focus,
+  &.focus
+    color: $btn-default-color
+    text-decoration: none
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] &
+    cursor: $cursor-disabled
+    +opacity(.65)
+    +box-shadow(none)
+
 .btn-que-default
   +button-que-variant($btn-default-color, $btn-default-border)
 .btn-que-primary
-  +button-que-variant($btn-primary-border, $btn-primary-border)
+  +button-que-variant(#fff, $que-main-color)
+.btn-que-lg
+  +button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+.btn-que-sm
+  +button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+.btn-que-xs
+  +button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+
+// Block button
+// --------------------------------------------------
+
+.btn-que-block
+  display: block
+  width: 100%
+
+// Vertically space out multiple block buttons
+.btn-que-block + .btn-que-block
+  margin-top: 5px
